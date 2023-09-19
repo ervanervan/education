@@ -10,9 +10,12 @@ const Navbar = () => {
     <div className="fixed w-full top-0 left-0 z-20">
       <div>
         <div className="container mx-auto py-4 flex items-center justify-between px-6">
-          <div className="text-xl text-teal font-bold uppercase tracking-wide">
+          <a
+            href="/"
+            className="text-xl text-teal-700 font-bold uppercase tracking-wide"
+          >
             Skills
-          </div>
+          </a>
           <HiMenuAlt1
             className="text-3xl sm:hidden cursor-pointer"
             onClick={() => setToggle(true)}
@@ -21,12 +24,12 @@ const Navbar = () => {
             {navLinks.map((navLink) => {
               return <NavLink key={navLink.id} {...navLink} />;
             })}
-            <button className="px-6 py-3 font-bold text-sm rounded-lg border border-gray">
+            <button className="px-6 py-3 font-bold text-sm text-white rounded-lg bg-teal-700 hover:bg-teal-800 active:bg-teal-900">
               Sign Up
             </button>
           </div>
           {toggle && (
-            <div className="fixed h-full w-11/12 top-0 right-0 z-20 bg-teal text-white flex flex-col items-center justify-center shadow-lg gap-8 p-8">
+            <div className="fixed h-full w-11/12 top-0 right-0 z-20 bg-teal-700 text-white flex flex-col items-center justify-center shadow-lg gap-8 p-8">
               {navLinks.map((navLink) => {
                 return (
                   <MobileNavLinks
@@ -36,7 +39,7 @@ const Navbar = () => {
                   />
                 );
               })}
-              <button className="px-6 py-3 font-bold text-sm rounded-lg border border-gray bg-white text-black">
+              <button className="px-6 py-3 font-bold text-black text-sm rounded-lg bg-slate-50 hover:bg-slate-100 active:bg-slate-200">
                 Sign Up
               </button>
               <HiX

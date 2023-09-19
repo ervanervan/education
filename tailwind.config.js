@@ -10,7 +10,6 @@ export default {
     },
     extend: {
       colors: {
-        teal: "#2F6C6D",
         hummingBird: "#d1f1ee",
         yellow: "#e4d63b",
         solitude: "#e9e9ea",
