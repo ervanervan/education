@@ -29,7 +29,7 @@ const Navbar = () => {
             </button>
           </div>
           {toggle && (
-            <div className="fixed h-full w-11/12 top-0 right-0 z-20 bg-teal-700 text-white flex flex-col items-center justify-center shadow-lg gap-8 p-8">
+            <div className="fixed h-full w-9/12 top-0 right-0 z-20 bg-teal-700 text-white flex flex-col items-center justify-center shadow-lg gap-8 p-8">
               {navLinks.map((navLink) => {
                 return (
                   <MobileNavLinks
