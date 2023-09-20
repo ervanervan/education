@@ -6,10 +6,27 @@ import MobileNavLinks from "./MobileNavLinks";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState(null);
+  useEffect(() => {
+    const scrollActive = () => {
+      setActive(window, scrollY > 20);
+    };
+    window.addEventListener("scroll", scrollActive);
+    return () => window.removeEventListener("scroll", scrollActive);
+  }, [active]);
+
   return (
-    <div className="fixed w-full top-0 left-0 z-20">
+    <div
+      className={`${
+        active ? "shadow-lg bg-solitude" : ""
+      } fixed w-full top-0 left-0 z-20`}
+    >
       <div>
-        <div className="container mx-auto py-4 flex items-center justify-between px-6">
+        <div
+          className={`${
+            active ? "py-3 transition-all duration-300" : "py-5"
+          } container mx-auto py-4 flex items-center justify-between px-6`}
+        >
           <a
             href="/"
             className="text-xl text-teal-700 font-bold uppercase tracking-wide"
