@@ -150,18 +150,26 @@ export const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 export const accordions = [
   {
     id: 1,
-    title: "What is Skillex?",
+    title: "What is Skills?",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, deleniti!",
   },
   {
     id: 2,
-    title: "What can I learn from Skillex?",
+    title: "What can I learn from Skills?",
+    description:
+      "Temporibus nobis saepe excepturi, doloremque eius odit ad porro provident dicta animi consectetur similique.",
   },
   {
     id: 3,
-    title: "Can I teach on Skillex?",
+    title: "Can I teach on Skills?",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor, nesciunt repellat corporis minus reprehenderit commodi pariatur quasi voluptatum perferendis.",
   },
   {
     id: 4,
-    title: "What is included in my Skillex membership?",
+    title: "What is included in my Skills membership?",
+    description:
+      "Facere exercitationem minima iste blanditiis quis, autem similique nostrum ducimus numquam! Officiis quod incidunt omnis impedit nam et dolorum porro laudantium fugiat consectetur minus placeat ratione nisi sapiente.",
   },
 ];

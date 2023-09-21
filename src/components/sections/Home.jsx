@@ -7,7 +7,7 @@ const Home = () => {
     <div className="section" id="home">
       <div className="md:flex items-center justify-center">
         <div>
-          <div className="font-bold text-xs text-teal-700 mb-4">
+          <div className="font-bold text-xs text-teal-700 mb-4 mt-8">
             Your E-Learning Partner
           </div>
           <div className="sm:text-[2.5rem] text-[1.825rem] font-bold">
@@ -17,8 +17,8 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At, eos nam
             aliquid ad reiciendis est?
           </p>
-          <div className="mt-6">
-            <button className="px-6 py-3 text-white font-bold rounded-lg text-sm mr-4 bg-teal-700 hover:bg-teal-800 active:bg-teal-900">
+          <div className="mt-6 flex gap-4">
+            <button className="px-6 py-3 text-white font-bold rounded-lg text-sm bg-teal-700 hover:bg-teal-800 active:bg-teal-900">
               Get Started
             </button>
             <button className="px-6 py-3 font-bold text-sm border border-solid border-gray rounded-lg bg-slate-50 hover:bg-slate-100 active:bg-slate-200">
