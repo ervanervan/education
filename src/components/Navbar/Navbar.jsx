@@ -3,6 +3,7 @@ import { navLinks } from "../../Data";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
 import NavLink from "./NavLink";
 import MobileNavLinks from "./MobileNavLinks";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -46,7 +47,12 @@ const Navbar = () => {
             </button>
           </div>
           {toggle && (
-            <div className="fixed h-full w-9/12 top-0 right-0 z-20 bg-teal-700 text-white flex flex-col items-center justify-center shadow-lg gap-8 p-8">
+            <motion.div
+              initial={{ x: 500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="fixed h-full w-9/12 top-0 right-0 z-20 bg-teal-700 text-white flex flex-col items-center justify-center shadow-lg gap-8 p-8"
+            >
               {navLinks.map((navLink) => {
                 return (
                   <MobileNavLinks
@@ -56,14 +62,14 @@ const Navbar = () => {
                   />
                 );
               })}
-              <button className="px-6 py-3 font-bold text-black text-sm rounded-lg bg-slate-50 hover:bg-slate-100 active:bg-slate-200">
+              <button className="px-6 py-3 font-bold text-sm text-black border border-solid border-gray rounded-lg bg-slate-50 hover:bg-slate-100 active:bg-slate-200">
                 Sign Up
               </button>
               <HiX
                 className="absolute right-6 top-6 text-3xl cursor-pointer"
                 onClick={(prev) => setToggle(!prev)}
               />
-            </div>
+            </motion.div>
           )}
         </div>
       </div>

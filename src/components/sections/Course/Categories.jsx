@@ -2,14 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Categories = ({ icon, category }) => {
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
   return (
-    <div className="flex flex-col items-center gap-4 p-8 bg-white rounded-md">
+    <motion.div
+      variants={item}
+      whileHover={{ scale: 1.1 }}
+      className="flex flex-col items-center gap-4 p-8 bg-white rounded-md"
+    >
       <div className="text-4xl text-teal-700">{icon}</div>
       <div>{category}</div>
       <a href="" className="text-sm text-gray">
         View More
       </a>
-    </div>
+    </motion.div>
   );
 };
 

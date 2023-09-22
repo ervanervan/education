@@ -10,7 +10,7 @@
   }
 
   .section {
-    @apply container mx-auto py-16 px-6 min-h-screen;
+    @apply container py-16 px-6 mx-auto;
   }
 
   .animate-slide:hover {
